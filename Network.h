@@ -1,19 +1,19 @@
 #include<vector>
 #include<map>
-
+using namespace std;
 #ifndef NETWORK_H
 #define NETWORK_H
 
 
 struct Transaction {
-	std::string donor;
-	std::string borrower;
+	string donor;
+	string borrower;
 	int amount;
 };
 
 class Network {
-	std::vector<Transaction> transactions;
-	std::map<std::string, int> net_amount;
+	vector<Transaction> transactions;
+	map<std::string, int> net_amount;
 public:
 	void addTransaction(Transaction s);
 
