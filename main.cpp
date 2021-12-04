@@ -1,8 +1,7 @@
 #include<iostream>
-
 using namespace std;
 #include"Network.h"
-
+#include"Network.cpp"
 int main(){
 	Network friends;
 
@@ -27,7 +26,11 @@ int main(){
 			cin>>brwr;
 			cout<<"\tEnter Amount : ";
 			cin>>amt;
-			friends.addTransaction({dnr,brwr,amt});
+			Transaction tt;
+			tt.donor=dnr;
+			tt.borrower=brwr;
+			tt.amount=amt;
+			friends.addTransaction(tt);
 			cout<<"\tAdded Successfully"<<endl;
 			cout<<endl;
 		}
