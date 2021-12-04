@@ -23,8 +23,8 @@ void Network::addTransaction(Transaction s) {
 	if (net_amount.count(brwr) == 0) {
 		net_amount[brwr] = 0;
 	}
-	net_amount[dnr] -= amt;
-	net_amount[brwr] += amt;
+	net_amount[dnr] += amt;
+	net_amount[brwr] -= amt;
 
 }
 
